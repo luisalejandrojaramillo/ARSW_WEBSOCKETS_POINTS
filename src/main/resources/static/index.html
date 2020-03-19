@@ -29,7 +29,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
     
-    <body onload="app.init()">
+    <body> <!--onload="app.init()"-->
+        Numero de dubujo:<input id="nDib" />
+        <button class="submit" onclick="app.init()">Connect</button>
+        <br/>
         X:<input id="x" type="number"/>
         Y:<input id="y" type="number"/>        
         <button onclick="app.publishPoint($('#x').val(),$('#y').val())">Send point</button>

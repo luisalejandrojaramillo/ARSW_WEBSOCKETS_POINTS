@@ -41,13 +41,9 @@ var app = (function () {
                 callback(new Point(obj.x,obj.y));
             });
         });
-
     };
 
-
-
     return {
-
         init: function () {
             id = $("#nDib").val();
             var can = document.getElementById("canvas");
@@ -66,7 +62,6 @@ var app = (function () {
             addPointToCanvas(pt);
             stompClient.send("/topic/newpoint",{},JSON.stringify(pt));
             //publicar el evento
-
         },
 
         disconnect: function () {
